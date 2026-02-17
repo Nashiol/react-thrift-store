@@ -2,7 +2,7 @@
 
 A modern, beautifully designed thrift platform for premium clothing, specializing in shorts and bottoms. Built with React, TypeScript, and Tailwind CSS.
 
-# Live Link
+# 🖇️ Live Link
 
 [**prmsh-thrift.netlify.app**](https://prmsh-thrift.netlify.app)
 
