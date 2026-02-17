@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { MessageCircle } from 'lucide-react';
 import short1Image from '../assets/images/short1.jpeg';
 import short2Image from '../assets/images/short2.jpeg';
@@ -10,7 +11,7 @@ interface Product {
   id: number;
   name: string;
   category: 'Shorts' | 'Bottoms';
-  price: string; // Optional visually
+  price: string;
   image: string;
 }
 
@@ -60,6 +61,8 @@ const products: Product[] = [
 ];
 
 const Buy = () => {
+  const [visibleProducts, setVisibleProducts] = useState<number[]>([]);
+
   const handleWhatsAppClick = (productName: string) => {
     const phoneNumber = '260779727014';
     const message = `Hi I am interested in ${productName}`;
@@ -67,19 +70,39 @@ const Buy = () => {
     window.open(url, '_blank');
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      products.forEach((_, index) => {
+        setTimeout(() => {
+          setVisibleProducts(prev => [...prev, index + 1]);
+        }, index * 100);
+      });
+    }, 300);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-bg-off-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-text-dark mb-2 text-center">Shop Collection</h1>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        <h1 className="text-4xl font-bold text-text-dark mb-2 text-center opacity-0 animate-fade-in-up">
+          Shop Collection
+        </h1>
+        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto opacity-0 animate-fade-in-up animation-delay-150">
           Discover our curated selection of premium secondhand pieces.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {products.map((product) => (
+          {products.map((product, index) => (
             <div
               key={product.id}
-              className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col group"
+              className={`bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group ${
+                visibleProducts.includes(product.id)
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-8'
+              }`}
+              style={{
+                transitionDelay: `${(index % 4) * 50}ms`
+              }}
             >
               {/* Image */}
               <div className="relative h-64 overflow-hidden">
@@ -103,7 +126,7 @@ const Buy = () => {
                 <div className="mt-auto">
                   <button
                     onClick={() => handleWhatsAppClick(product.name)}
-                    className="w-full bg-primary-brown text-white py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-[#5a3620] transition-colors duration-200 group-hover:shadow-md cursor-pointer"
+                    className="w-full bg-primary-brown text-white py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-[#5a3620] transition-all duration-200 group-hover:shadow-md cursor-pointer active:scale-[0.98]"
                   >
                     <MessageCircle size={18} />
                     Contact on WhatsApp
