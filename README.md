@@ -1,6 +1,6 @@
 # PRMSH Thrift Store
 
-A modern, beautifully designed e-commerce platform for premium secondhand clothing, specializing in shorts and bottoms. Built with React, TypeScript, and Tailwind CSS.
+A modern, beautifully designed thrift platform for premium clothing, specializing in shorts and bottoms. Built with React, TypeScript, and Tailwind CSS.
 
 ## 🌟 Features
 
