@@ -61,7 +61,7 @@ const products: Product[] = [
 
 const Buy = () => {
   const handleWhatsAppClick = (productName: string) => {
-    const phoneNumber = '260000000000';
+    const phoneNumber = '260779727014';
     const message = `Hi I am interested in ${productName}`;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
