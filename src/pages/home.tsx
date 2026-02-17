@@ -87,17 +87,16 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section 
+      <section
         id="about-section"
         className="py-20 bg-bg-off-white"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Image */}
-            <div 
-              className={`relative h-100 md:h-125 rounded-2xl overflow-hidden shadow-2xl transition-all duration-700 ${
-                aboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
-              }`}
+            <div
+              className={`relative h-100 md:h-125 rounded-2xl overflow-hidden shadow-2xl transition-all duration-700 ${aboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+                }`}
             >
               <img
                 src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
@@ -106,9 +105,8 @@ const Home = () => {
               />
             </div>
             {/* Text */}
-            <div className={`space-y-6 transition-all duration-700 delay-200 ${
-              aboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
-            }`}>
+            <div className={`space-y-6 transition-all duration-700 delay-200 ${aboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+              }`}>
               <h2 className="text-3xl md:text-4xl font-bold text-text-dark">
                 Curated for <span className="text-primary-brown">Confidence</span>
               </h2>
@@ -127,22 +125,20 @@ const Home = () => {
       </section>
 
       {/* Featured Categories */}
-      <section 
+      <section
         id="categories-section"
         className="py-20 bg-white"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className={`text-3xl md:text-4xl font-bold text-text-dark text-center mb-12 transition-all duration-700 ${
-            categoriesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-          }`}>
+          <h2 className={`text-3xl md:text-4xl font-bold text-text-dark text-center mb-12 transition-all duration-700 ${categoriesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
             Explore Our Collection
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Shorts Card */}
-            <div 
-              className={`group relative h-100 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 cursor-pointer ${
-                categoriesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
+            <div
+              className={`group relative h-100 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 cursor-pointer ${categoriesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
               style={{ transitionDelay: '150ms' }}
             >
               <div className="absolute inset-0">
@@ -151,7 +147,7 @@ const Home = () => {
                   alt="Shorts"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent" />
               </div>
               <div className="absolute bottom-0 left-0 p-8 w-full">
                 <h3 className="text-2xl font-bold text-white mb-2">Premium Shorts</h3>
@@ -168,10 +164,9 @@ const Home = () => {
             </div>
 
             {/* Bottoms Card */}
-            <div 
-              className={`group relative h-100 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 cursor-pointer ${
-                categoriesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
+            <div
+              className={`group relative h-100 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 cursor-pointer ${categoriesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
               style={{ transitionDelay: '300ms' }}
             >
               <div className="absolute inset-0">
@@ -180,7 +175,7 @@ const Home = () => {
                   alt="Bottoms"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent" />
               </div>
               <div className="absolute bottom-0 left-0 p-8 w-full">
                 <h3 className="text-2xl font-bold text-white mb-2">Essential Bottoms</h3>
