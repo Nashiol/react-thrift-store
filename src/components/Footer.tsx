@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MessageCircle } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -29,12 +29,12 @@ const Footer = () => {
             <div className="flex space-x-6 justify-center md:justify-start">
 
               <a
-                href="https://wa.me/260000000000"
+                href="https://wa.me/260779727014"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-light-brown transition-colors duration-200 transform hover:scale-110"
               >
-                <MessageCircle size={28} />
+                <FaWhatsapp size={28} />
               </a>
             </div>
             <p className="mt-8 text-xs text-gray-500">
