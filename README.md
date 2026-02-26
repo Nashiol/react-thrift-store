@@ -4,7 +4,7 @@ A modern, beautifully designed thrift platform for premium clothing, specializin
 
 # 🖇️ Live Link
 
-[**prmsh-thrift.netlify.app**](https://prmsh-thrift-store.netlify.app)
+[**prmsh-thrift-store.netlify.app**](https://prmsh-thrift-store.netlify.app)
 
 ## 🌟 Features
 
